@@ -36,22 +36,4 @@ public extension UIImage {
          
         return scaledImage!
     }
-        
-    /// image compress 图片压缩
-    /// - Parameter byte: 最大图片大小，默认 1M
-    /// - Returns: compress image data 图片压缩后的大小
-    func sk_compress(maxByteLength byte: UInt = 1024 * 1024 * 1) -> Data? {
-        var data = self.jpegData(compressionQuality: 1)
-        print("压缩前: \(data?.count ?? 0)")
-        
-        if data?.count ?? 0 < byte {
-            return data
-        }
-        let dataCount = CGFloat(data?.count ?? 1)
-        let compress = CGFloat(byte) / dataCount
-        data = self.jpegData(compressionQuality: compress)
-        print("压缩率: \(compress)")
-        print("压缩后: \(data?.count ?? 0)")
-        return data
-    }
 }
