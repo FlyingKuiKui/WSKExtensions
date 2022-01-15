@@ -1,19 +1,19 @@
 {
   "name": "WSKExtensions",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "summary": "A short description of WSKExtensions.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/370969280@qq.com/WSKExtensions",
+  "description": "常用组件库",
+  "homepage": "https://github.com/FlyingKuiKui/WSKExtensions",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "370969280@qq.com": "shengkuiwang@126.com"
+    "sehngkuiwang": "shengkuiwang@126.com"
   },
   "source": {
-    "git": "https://github.com/370969280@qq.com/WSKExtensions.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/FlyingKuiKui/WSKExtensions.git",
+    "tag": "0.1.1"
   },
   "platforms": {
     "ios": "9.0"
