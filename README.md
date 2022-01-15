@@ -22,7 +22,7 @@ pod 'WSKExtensions'
 
 ## Author
 
-370969280@qq.com, shengkuiwang@126.com
+shengkuiwang@126.com
 
 ## License
 
