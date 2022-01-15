@@ -21,4 +21,8 @@ extension UIView {
     var sk_maxX: CGFloat {
         return self.bounds.maxX
     }
+
+    var sk_maxY: CGFloat {
+        return self.frame.origin.y + self.frame.size.height
+    }
 }
