@@ -1,5 +1,5 @@
 PODS:
-  - WSKExtensions (0.1.1)
+  - WSKExtensions (0.1.3)
 
 DEPENDENCIES:
   - WSKExtensions (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  WSKExtensions: 0d20269fdabce1b24ffdf7cfa8f3054330c84a0f
+  WSKExtensions: f317f4e5f9f23b80c785cae16ebae7dd954ea32d
 
 PODFILE CHECKSUM: 89e85b073ac409faaffc111896fda0b8b7b4cb9b
 
