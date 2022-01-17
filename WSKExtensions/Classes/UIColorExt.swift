@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 public extension UIColor {
-    /// 随机色
+    /// 获取随机色
     class var sk_randomColor: UIColor {
         let red = CGFloat(arc4random()%256)/255.0
         let green = CGFloat(arc4random()%256)/255.0
@@ -21,7 +21,7 @@ public extension UIColor {
     ///   - hexStr: 十六进制字符串 0x/#
     ///   - alpha: 透明度，默认值1.0
     /// - Returns: 返回UIColor
-    class func sk_HexColor(hexStr: String, alpha: CGFloat = 1.0) -> UIColor {
+    class func sk_hexColor(hexStr: String, alpha: CGFloat = 1.0) -> UIColor {
         var cStr = hexStr.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).uppercased() as NSString
         
         if cStr.length < 6 {

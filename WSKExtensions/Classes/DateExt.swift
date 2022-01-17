@@ -41,4 +41,17 @@ public extension Date {
         formatter.dateFormat = dateFormat
         return formatter.string(from: self)
     }
+    
+    /// 获取时间戳
+    /// - Returns: 返回10位时间戳
+    static func sk_timeStamp() -> Int {
+        return Int(NSDate().timeIntervalSince1970)
+    }
+    /// 获取时间戳
+    /// - Returns: 返回13位时间戳
+    static func sk_milliStamp() -> CLongLong {
+        return CLongLong(round((NSDate().timeIntervalSince1970)*1000))
+    }
 }
+
+

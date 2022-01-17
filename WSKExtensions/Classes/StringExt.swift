@@ -9,6 +9,7 @@ import CommonCrypto
 import Foundation
 
 public extension String {
+    /// 获取字符串对应的MD5值
     var sk_md5: String {
         let utf8 = cString(using: .utf8)
         var digest = [UInt8](repeating: 0, count: Int(CC_MD5_DIGEST_LENGTH))
@@ -16,16 +17,16 @@ public extension String {
         return digest.reduce("") { $0 + String(format: "%02X", $1) }.lowercased()
     }
 
-    // MARK: String_sha256
-
+    /// 获取字符串对应的sha256值
     var sk_sha256: String {
         let utf8 = cString(using: .utf8)
         var digest = [UInt8](repeating: 0, count: Int(CC_SHA256_DIGEST_LENGTH))
         CC_SHA256(utf8, CC_LONG(utf8!.count - 1), &digest)
         return digest.reduce("") { $0 + String(format: "%02x", $1) }
     }
+
     // MARK: 获取字符出现的位置信息(支持多次位置获取)
-    
+
     /// - Parameter string: 原始文本
     /// - Parameter inString: 需要查找的字符
     func sk_rangeOfString(inString: String) -> [NSRange] {
@@ -111,8 +112,8 @@ public extension String {
         return String(self[beginIndex...endIndex])
     }
 
-    
-    // 获取文本高度
+    // MARK: 获取文本高度
+
     func sk_getTextHeigh(font: UIFont, width: CGFloat) -> CGFloat {
         let normalText: NSString = self as NSString
         let size = CGSize(width: width, height: 1000)
@@ -121,7 +122,8 @@ public extension String {
         return stringSize.height
     }
 
-    // 获取文本宽度
+    // MARK: 获取文本宽度
+
     func sk_getTextWidth(font: UIFont, height: CGFloat) -> CGFloat {
         let normalText: NSString = self as NSString
         let size = CGSize(width: 1000, height: height)
@@ -136,7 +138,8 @@ public extension String {
         return trimmed.isEmpty
     }
 
-    /// EZSE: Checks if String contains Emoji
+    // MARK: 校验字符串中是否包含Emoji
+
     func sk_includesEmoji() -> Bool {
         for i in 0 ..< count {
             let c: unichar = (self as NSString).character(at: i)
@@ -149,6 +152,7 @@ public extension String {
 }
 
 extension Optional where Wrapped == String {
+    // MARK: 校验字符串中是否是nil或者为空
     var sk_isNilOrEmpty: Bool {
         return self?.isEmpty ?? true
     }
